@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".parentActivity.googleMapsFragment" />
+
+        <ImageButton
+            android:id="@+id/MapsettingButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_baseline_circle_24"
+            android:src="@drawable/ic_baseline_settings_24" />
+
+        <RelativeLayout
+            android:id="@+id/mapsettingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_above="@id/MapsettingButton"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:background="@color/darkblue"
+            android:tag="hidden"
+            >
+
+            <TextView
+                android:id="@+id/zoomlable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingTop="10dp"
+                android:text="zoom"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <SeekBar
+                android:id="@+id/zoomControl"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/zoomvalue"
+                android:layout_toEndOf="@id/zoomlable"
+                android:background="@color/darkblue"
+                android:theme="@style/Theme.AppCompat" />
+
+            <TextView
+                android:id="@+id/zoomvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:text="15"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".parentActivity.MainActivity"
+    android:background="@color/darkblue">
+
+    <ImageView
+        android:id="@+id/linkchildpageImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/linkchildLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linkchildpageImage"
+        android:gravity="center"
+        android:text="Link account"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/linkchildEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/linkchildLogo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/email"
+        android:gravity="left|center"
+        android:hint="EMAIL"
+        android:textColorHint="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/linkchildPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/linkchildEmail"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/password"
+        android:gravity="left|center"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/linkchildconnectButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/linkchildPassword"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/rounded"
+        android:text="Connect"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/linkchildregisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/linkchildconnectButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="No child Account Yet? register"
+        android:textColor="@color/SkyBlue"
+        android:textSize="19sp" />
+
+
+
+    <ProgressBar
+        android:id="@+id/loginprogress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/linkchildregisterButton"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dp"
+        android:visibility="invisible" />
+</RelativeLayout>

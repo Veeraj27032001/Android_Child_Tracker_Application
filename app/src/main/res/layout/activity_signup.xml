@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".parentActivity.MainActivity"
+    android:background="@color/darkblue">
+
+    <ImageView
+        android:id="@+id/signupPageImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/signupLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signupPageImage"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/signupEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signupLogo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/email"
+        android:gravity="left|center"
+        android:hint="EMAIL"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/signupName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signupEmail"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/user_name_logo"
+        android:gravity="left|center"
+        android:hint="NAME"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/signupPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signupName"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/password"
+        android:gravity="left|center"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/signupRePassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signupPassword"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded"
+        android:drawableLeft="@drawable/password"
+        android:gravity="left|center"
+        android:hint="RE-PASSWORD"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/signupRePassword"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/rounded"
+        android:text="Sign Up"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/alredyhaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/signupButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="Already have account? Log In"
+        android:textColor="@color/SkyBlue"
+        android:textSize="19sp" />
+
+    <ProgressBar
+        android:id="@+id/signupprogress"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:paddingTop="5dp"
+        android:visibility="invisible"
+        android:layout_below="@id/alredyhaveAccount"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

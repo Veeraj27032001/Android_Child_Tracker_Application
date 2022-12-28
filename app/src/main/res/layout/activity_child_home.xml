@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkblue"
+    tools:context=".childScreen.ChildHome">
+<FrameLayout
+    android:layout_width="220dp"
+    android:id="@+id/menuButtonContainer"
+    android:layout_height="60dp"
+    android:background="@color/darkblue"
+    android:paddingEnd="150dp">
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkblue"
+        android:src="@drawable/ic_baseline_menu_24"
+        android:tag="openmenu" />
+</FrameLayout>
+    <LinearLayout
+
+        android:id="@+id/menuContainer"
+        android:layout_width="220dp"
+        android:orientation="vertical"
+        android:background="@color/lightblue"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/childhomeHomeButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="home"/>
+        <Button
+            android:id="@+id/childhomeprofileButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="profile"/>
+        <Button
+            android:id="@+id/childTutorialButton"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="50dp"
+            android:text="Tutorial"/>
+    <Button
+        android:id="@+id/childlogoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:text="log out"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/childhomeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/servicestatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="service"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/childprofilecontainer"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/childprofileimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/profile_round" />
+
+        <TextView
+            android:id="@+id/childprofileName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/childprofileimage"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:text="NAME"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/childEmail_lable"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/childprofileName"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="18dp"
+            android:text="EMAIL :"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/childProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/childprofileName"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/childEmail_lable"
+            android:scrollbars="vertical"
+            android:text="example@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/childprofiledeleteMyAccount"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/childEmail_lable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded"
+            android:text="Delete my account" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/TutorialContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/textTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="text tutorial"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tutorialControlButton"
+            android:layout_below="@id/textTutorial"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tutorial1" />
+
+        <Button
+            android:id="@+id/tutorialControlButton"
+            android:layout_width="150dp"
+            android:tag="tutorial1"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded"
+            android:text="@string/next"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</RelativeLayout>
